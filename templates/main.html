@@ -6,6 +6,7 @@
     <title>INVESTiWISE</title>
     <link rel="icon" type="image/x-icon" href="/investiwise/static/assests/title iconrttt.png">
     <link rel="stylesheet" href="/investiwise/static/css/main.css">
+    <link rel="stylesheet" href="/investiwise/static/css/particle.css">
 </head>
 <body>
    <nav>
@@ -24,23 +25,52 @@
         </div>
     </div>
    </nav>
-   <section class="main-search">
+   <section class="main-search" id="master">
     <div class="container search-cont ">
-        <div class="search-heading">
-            <h1>INVEST<span class="search-heading-i">i</span>WISE</h1>
+        <div class="search-heading" >
+            <h1 class="main-search-head" id="head">INVEST<span class="search-heading-i">i</span>WISE</h1>
         </div>
         <div class="search-form">
-            <form class="search-form-cont flex"action="">
-                <input placeholder="Enter Company Name" type="text" name="Search" class="Search-input" required>
-                <button class="Sbtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <form class="search-form-cont flex"action="" id="myForm" name="forms1">
+                <input placeholder="Enter Company Name" id="inputtag"type="text" name="Search" class="Search-input" required>
+                <button class="Sbtn" id="btn" onclick="validateForm()" ><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
-        <div class="tagline">
-            <h1>Detailed analysis of make an</h1>
-            <h1>INFORMED INVESTOR</h1>
+        <div>
+            <h1 class="tagline" id="tline">Detailed analysis of make an <br> INFORMED INVESTOR</h1>
         </div>
     </div>
    </section>
+   <div class="page-bg"></div>
+    <div class="animation-wrapper">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+    </div>
+    </div>
 </body>
 <script src="https://kit.fontawesome.com/b5a8447ad3.js" crossorigin="anonymous"></script>
+<script>
+    const headsec = document.getElementById('head');
+    const btnsec =  document.getElementById('btn');
+    const tagsec = document.getElementById('tline')
+    const form = document.getElementById('myForm');
+    const mainsec = document.getElementById("master")
+    function validateForm() {
+    var x = document.forms["forms1"]["Search"].value;
+    if (x != "") {
+        headsec.classList.toggle("active");
+        myForm.classList.toggle("active")
+        tagsec.classList.toggle("active")
+        mainsec.classList.toggle("active")
+        const delay = 1100; // 2 seconds
+        form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        setTimeout(function() {
+            form.submit();
+        }, delay);
+        });
+        return false;
+    }
+}
+</script>
 </html>

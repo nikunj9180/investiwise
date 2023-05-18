@@ -114,23 +114,9 @@ nav{
 .search-heading h1{
     text-align: center;
     font-size: 6rem;
-    animation: heading 2s ease-in forwards;
     user-select: none;
 }
 
-@keyframes heading
-{
-    0%{
-        text-shadow: 0px 0px 0 #AA3FFF, 0px 0px 0 #4A25B3,0px 0px 0 #E5FE40;
-    }
-    50%{
-        text-shadow: 1.5px 1.5px 0 #AA3FFF, 3px 3px 0 #4A25B3,4.5px 4.5px 0 #E5FE40;
-    }
-    100%{
-        
-        text-shadow: 3px 3px 0 #AA3FFF, 6px 6px 0 #4A25B3,9px 9px 0 #E5FE40;
-    }
-}
 .search-heading-i{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: var(--padding-inline);
@@ -176,7 +162,10 @@ nav{
 }
 
 
-.main-search-head.active{
+
+/* Keyframe animation */
+
+.main-search-head{
     animation: heading2 1s ease-in-out forwards;
 }
 
@@ -193,7 +182,8 @@ nav{
         opacity: 0;
     }
 }
-.search-form-cont.active{
+
+.search-form-cont{
     animation: search 1s ease-in-out forwards;
 }
     
@@ -209,7 +199,7 @@ nav{
         margin-right: auto;
     }
 }
-.tagline.active{
+.tagline h1{
     animation: heading3 1s ease-in-out forwards;
 }
 @keyframes heading3{
@@ -222,7 +212,7 @@ nav{
         opacity: 0;
     }
 }
-.main-search.active{
+.main-search{
     animation: master 1s ease-in-out  forwards;
 }
 
