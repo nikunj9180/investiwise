@@ -182,6 +182,7 @@ nav{
     position: absolute;
     top: 20%;
     left: 45%;
+    z-index: 8;
 }
 .lds-ellipsis {
     display: inline-block;
@@ -239,4 +240,16 @@ nav{
     }
   }
   
-
+.loading{
+    /* display: none; */
+}
+/* pdf viewer */
+.pdf-viewer{
+   position: relative;
+    z-index: 9;
+    display: none;
+}
+.pdf-viewer object{
+   padding-top: 10rem;
+   height: 100vh;
+}
