@@ -31,7 +31,6 @@ h3{
 p{
     
     font-size: 1.1rem;
-    color:black;
     line-height: 1.8rem;
 }
 a{
@@ -241,15 +240,45 @@ nav{
   }
   
 .loading{
-    /* display: none; */
+    display: none;
 }
 /* pdf viewer */
 .pdf-viewer{
    position: relative;
     z-index: 9;
-    display: none;
+    /* display: none; */
 }
 .pdf-viewer object{
    padding-top: 10rem;
    height: 100vh;
+}
+.cards{
+    position: relative;
+    z-index: 10;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.cards .senti{
+    display: none;
+}
+.card{
+    width: 30%;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid var(--primary-font-color);
+    background:linear-gradient(black,gray);
+    flex-direction: column;
+}
+
+.card .senti{
+    text-align: right;
+}
+.positive{
+    color: greenyellow;
+}
+.negative{
+    color: red;
+}
+.Equal{
+    color: white;
 }
