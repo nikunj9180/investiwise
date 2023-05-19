@@ -73,7 +73,7 @@ nav{
     box-shadow: 0 1px 5px var(--primary-font-color);
     background: black; */
     position: absolute;
-    z-index: 9;
+    z-index: 10;
     width: 100%;
 }
 .navbar{
@@ -107,7 +107,7 @@ nav{
   position: absolute;
   top: 25%;
   width: 100%;
-  z-index: 9;
+  z-index: 10;
 }
 
 .search-heading h1{
@@ -121,6 +121,7 @@ nav{
     margin: var(--padding-inline);
 }
 .search-form-cont{
+    position: relative;
     width: 100%;
     border-radius: var(--search-border-radius);
     background-color: white;
@@ -258,9 +259,9 @@ nav{
     justify-content: space-between;
     margin-top: 50px;
 }
-.cards .senti{
+/* .cards .senti{
     display: none;
-}
+} */
 .card{
     width: 30%;
     padding: 20px;
